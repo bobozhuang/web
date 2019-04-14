@@ -42,7 +42,8 @@ public class Request {
 					//请求头，找有没有Content-length
 					while ((line = in.readLine()) != null) {
 						if (line.contains("Content-Length")) {
-							requestBodyLen = Integer.parseInt(line.substring(line.indexOf(":")+1).trim());//返回的字符串排除前后空白，从而拿到Length
+							requestBodyLen = Integer.parseInt(line.substring(line.indexOf(":")+1).trim());
+							//返回的字符串排除前后空白，从而拿到Length
 						}
 						if(line.equals("")){
 							break;
